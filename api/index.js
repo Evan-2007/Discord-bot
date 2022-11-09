@@ -5,6 +5,8 @@ require('dotenv').config();
 const app = express();
 app.use(express.json())
 
+
+//array for post request
 const hello = [
     {id: 1, name: 'hello1' },
     {id: 2, name: 'hello2' },
@@ -27,7 +29,7 @@ app.post('/api/v1/hello', (req, res) => {
     };
     
     const hi = {
-        id: hello.length + 1,
+        id: hello.length + 1, //chage to 1
         name: req.body.name
     };
     hello.push(hi);
