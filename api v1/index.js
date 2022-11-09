@@ -29,10 +29,14 @@ app.post('/api/v1/hello', (req, res) => {
         res.status(400).send('you did this wrong. go read the non existant documentation')
     };
     
+    const deletechargestatus = hello.shift()
+
     const hi = {
         id: hello.length + 1, //chage to 1
         name: req.body.name
     };
+
+    hello.push(deletechargestatus);
     hello.push(hi);
     res.send(hi);
 })
