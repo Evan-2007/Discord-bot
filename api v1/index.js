@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 const { request, response } = require('express');
 const express = require('express');
 require('dotenv').config();
