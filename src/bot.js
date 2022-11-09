@@ -22,18 +22,26 @@ client.on('ready', ()=> {
     console.log('the bot is ready')
 })
 
-client.on('messageCreate', message =>{
-    if (message.content === 'ping') {
-        message.reply('pong')
+client.on('interactionCreate', (interaction) => {
+    if (interaction.isChatInputCommand()){
+        console.log('did it work? i guess it did.')
+        //interaction.reply({ content: 'hi'})
     }
 })
+
+client.on('messageCreate', message =>{
+    if (message.content === 'ping') {
+        message.reply('pong');
+        
+    }
+});
 
 async function main() {
     const commands = [
         {
             name: "test",
             description: "test command"
-        },
+        }
     ];
     try{
         console.log('Started refreshing application (/) commands.');
@@ -43,7 +51,7 @@ async function main() {
         });
         client.login(TOKEN);
     } catch (error){
-        console.log(error)
+        console.log(error);
     }
 }
 
