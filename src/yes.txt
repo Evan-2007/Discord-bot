@@ -11,3 +11,5 @@ for (const folder of functionFolders) {
     .filter((file) => file.endsWith(".js"));
     for (const file of functionFiles) require
 }
+
+https://www.youtube.com/watch?v=pKd0Rpw7O48 37:30
