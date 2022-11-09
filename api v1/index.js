@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json())
 
 
-//array for post request
+//array for post requestt
 const hello = [
     {id: 1, name: 'hello1' },
     {id: 2, name: 'hello2' },
