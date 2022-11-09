@@ -18,4 +18,3 @@ paths:
   /hello:
     get:
       discription: gives you a list of hello
-  /
